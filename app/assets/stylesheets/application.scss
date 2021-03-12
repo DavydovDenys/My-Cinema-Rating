@@ -27,16 +27,16 @@
  }
 
 #header-bg {
-  background: url('/assets/bg-card') 0 0/100% auto no-repeat fixed;
+  background: image-url('bg-card.jpg') 0 0/100% auto no-repeat fixed;
 }
 
  #card-profile {
-   background: url('/assets/2') 0 0 no-repeat fixed;
+   background: image-url('2.jpg') 0 0 no-repeat fixed;
    color:rgb(255, 255, 255)
  }
 
  .center.jumbotron {
-    background: url('/assets/2') 0 0 no-repeat fixed;
+    background: image-url('2.jpg') 0 0 no-repeat fixed;
     color:rgb(255, 202, 9)
  }
 
@@ -54,11 +54,11 @@ a#logo:hover {
 }
 
 body {
-  background: url('/assets/my-bg-2') 0 0/100%auto no-repeat fixed;
+  background: image-url('my-bg-2.jpg') 0 0/100%auto no-repeat fixed;
 }
 
 #card-bg {
-  background: url('/assets/2') 0 0 no-repeat fixed;
+  background: image-url('2.jpg') 0 0 no-repeat fixed;
   color:rgb(214, 255, 253);
 }
 
