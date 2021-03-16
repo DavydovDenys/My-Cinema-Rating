@@ -2,6 +2,7 @@
 
 class CommentsController < ApplicationController
   include SessionsHelper
+  before_action :set_search
   def index
     @comments = Comment.all
   end
