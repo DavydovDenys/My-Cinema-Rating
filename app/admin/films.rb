@@ -12,14 +12,29 @@ ActiveAdmin.register Film do
   end
 
   member_action :publish, method: :put do
-    film = Film.find(params[:id])
+    film = Film.friendly.find(params[:id])
     film.update(published: true)
     redirect_to admin_film_path(film)
   end
 
   member_action :unpublish, method: :put do
-    film = Film.find(params[:id])
+    film = Film.friendly.find(params[:id])
     film.update(published: false)
     redirect_to admin_film_path(film)
+  end
+
+  index do
+    selectable_column
+    id_column
+    column :title
+    column :description
+    column :director
+    column :actors
+    column :imdb_rating
+    column :user_id
+    column :created_at
+    column :updated_at
+    column :published
+    actions
   end
 end

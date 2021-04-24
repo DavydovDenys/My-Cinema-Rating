@@ -52,7 +52,7 @@ class FilmsController < ApplicationController
   end
 
   def find_film
-    @film = Film.find(params[:id])
+    @film = Film.friendly.find(params[:id])
   end
 
   # fetching default attributes for film

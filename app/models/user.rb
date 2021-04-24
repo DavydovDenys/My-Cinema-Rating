@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+  
   has_many :films
   has_many :ratings
   attr_accessor :remember_token

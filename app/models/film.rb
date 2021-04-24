@@ -2,6 +2,16 @@
 
 # Film model
 class Film < ApplicationRecord
+  extend FriendlyId
+
+  def slug=(value)
+    if value.present?
+      write_attribute(:slug, value)
+    end
+  end
+
+  friendly_id :title, use: :slugged
+
   belongs_to :user
   has_many :ratings, dependent: :destroy
   has_many :comments, -> { order(created_at: :desc) }, dependent: :destroy

@@ -28,6 +28,6 @@ class RatingsController < ApplicationController
   end
 
   def find_film
-    @film = Film.find(params[:film_id])
+    @film = Film.friendly.find(params[:film_id])
   end
 end
