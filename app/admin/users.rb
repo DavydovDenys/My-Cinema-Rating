@@ -1,11 +1,25 @@
 ActiveAdmin.register User do
 
+  actions :all, except: [:destroy, :create, :new, :update, :edit]
+
+  index do
+    selectable_column
+    id_column
+    column :name
+    column :email
+    column :created_at
+    column :updated_at
+    actions
+  end
+
+  
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :name, :email, :password_digest, :remember_digest
+  #permit_params :name, :email, :password_digest, :remember_digest
   #
   # or
   #

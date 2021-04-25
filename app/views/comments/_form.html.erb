@@ -2,7 +2,7 @@
 <div class='card'>
   <div class='body' id='card-bg'>
     <div class="form-group">
-      <%= form_with model: [@film, @film.comments.build] do |form| %>
+      <%= form_with(model: [@film, @film.comments.build], local: false) do |form| %>
         
         <% if @film.errors.any? %>
           <div id="error_explanation">

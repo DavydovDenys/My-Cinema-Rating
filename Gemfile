@@ -84,3 +84,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Adds sorting and searching
 gem 'ransack'
+gem 'active_admin_theme'
+gem 'friendly_id', '~> 5.4.0'

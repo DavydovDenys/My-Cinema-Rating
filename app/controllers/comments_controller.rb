@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @film = Film.find(params[:film_id])
+    @film = Film.friendly.find(params[:film_id])
     @comment = @film.comments.new(comment_params)
     @comment.user_id = current_user.id
     @comment.username = current_user.name
@@ -25,8 +25,8 @@ class CommentsController < ApplicationController
       flash[:success] = 'Comment has been created!'
       redirect_to film_path(@film)
     else
-      flash[:danger] = 'Something went wrong.'
-      render :new
+      flash[:danger] = @comment.errors.full_messages.last
+      redirect_to film_path(@film)
     end
   end
 
