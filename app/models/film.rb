@@ -10,7 +10,7 @@ class Film < ApplicationRecord
     end
   end
 
-  friendly_id :title, use: :slugged
+  friendly_id :title # use: :slugged
 
   belongs_to :user
   has_many :ratings, dependent: :destroy
