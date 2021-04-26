@@ -35,6 +35,7 @@ ActiveAdmin.register Film do
     column :created_at
     column :updated_at
     column :published
+    column :slug
     actions
   end
 end
