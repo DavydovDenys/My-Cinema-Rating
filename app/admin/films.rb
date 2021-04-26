@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 ActiveAdmin.register Film do
-  permit_params :title, :description, :image, :director, :actors, :imdb_rating, :user_id, :published
+  permit_params :title, :description, :image, :director, :actors, :imdb_rating, :user_id, :published, :slug
 
   action_item :publish, only: :show do
     link_to 'Publish', publish_admin_film_path(film), method: :put unless film.published?
