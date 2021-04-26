@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 ActiveAdmin.register Film do
+  attr_accessor :slug
   permit_params :title, :description, :image, :director, :actors, :imdb_rating, :user_id, :published, :slug
 
   action_item :publish, only: :show do
