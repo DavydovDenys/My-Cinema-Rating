@@ -3,7 +3,7 @@
 # Film model
 class Film < ApplicationRecord
   extend FriendlyId
-
+  attr_accessor :slug
   def slug=(value)
     if value.present?
       write_attribute(:slug, value)
